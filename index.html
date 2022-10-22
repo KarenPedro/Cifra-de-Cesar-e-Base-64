@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de César</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./imagens/icone - 1792193.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form class="container">
+        <h1 class="titulo">Codifique e descodifique uma mensagem oculta</h1>
+        <section class="escolha">
+            <select name="selecione" id="selecione">
+                <option value="metodo" disabled selected>Escolha</option>
+                <option value="cesar">Cifra de César</option>
+                <option value="base64">Base64</option>
+            </select>
+
+
+            <input class="ocultarIncremento" id="ocultarIncremento" type="number"
+                placeholder="Digite o número">
+
+
+            <div class="metodo">
+                <input checked type="radio" id="codificar" name="escolhaDeMetodo" value="codificar">
+                <label for="escolhaDeMetodo">Codificar</label>
+            </div>
+            <div class="metodo">
+                <input type="radio" id="decodificar" name="escolhaDeMetodo">
+                <label for="escolhaDeMetodo">Decodificar</label>
+            </div>
+        </section>
+
+        <section class="mensagem-usuario">
+            <textarea class="texto" id="escrever" name="texto-usuario" placeholder="Digite aqui" rows="10"
+                cols="33"></textarea>
+            <textarea class="texto" id="resultado" name="texto-usuario" rows="10" cols="33" readonly></textarea>
+        </section>
+
+        <button type="button" id="botao">Codificar</button>
+
+    </form>
+
+</body>
+</html>
